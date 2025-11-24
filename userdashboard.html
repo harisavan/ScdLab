@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Dashboard — PowerEase</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* --- DARK BLUE THEME STYLES FOR DASHBOARD --- */
+    :root {
+        --accent-yellow: #ffdd57; /* Using the yellow accent from your style.css */
+    }
+    
+    /* Set Dark Blue Background for the entire body */
+    body { 
+        background-color: #001f3f; /* Deep Dark Blue */
+        color: #fff; /* Default text color to white */
+    }
+    
+    /* Ensure Header background remains Dark Blue as per style.css */
+    .header { background: var(--primary-2); }
+
+    .wrap{ 
+        display:flex; 
+        gap:18px; 
+        min-height:72vh; 
+        padding:32px 0; /* Adjusted padding to match container structure */
+    }
+    
+    /* Aside (Sidebar) Styling */
+    .aside{ 
+        width:260px; 
+        background: rgba(255,255,255,0.15); /* Translucent background */
+        border-radius:10px; 
+        padding:18px; 
+        color:#fff; 
+        box-shadow: 0 4px 15px rgba(0, 120, 215, 0.2);
+    }
+    .aside h3 {
+        color: #fff; /* White heading */
+    }
+    .aside nav a {
+        color: #a8d5ff; /* Lighter blue links for better look */
+        display:block; 
+        margin:8px 0;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+    .aside nav a:hover {
+        color: #fff; 
+    }
+    
+    /* Main Area Styling */
+    .mainarea{ flex:1; }
+    .mainarea h2 {
+        color: #fff; /* White main heading */
+        margin-bottom:14px; 
+    }
+    
+    /* Stat Box Styling */
+    .stat{ display:flex; gap:14px; margin-bottom:14px; }
+    .stat .box{ 
+        background:rgba(255,255,255,0.12); 
+        padding:16px; 
+        border-radius:8px; 
+        color:#fff; 
+        flex:1; 
+        border-left: 4px solid var(--primary-1); /* Blue accent border */
+        box-shadow: 0 2px 8px rgba(0, 120, 215, 0.1);
+    }
+    
+    /* Card/Grid Styling */
+    .act-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin-top:14px; }
+    .card{ 
+        background: rgba(255,255,255,0.08); 
+        padding:16px; 
+        border-radius:10px; 
+        color:#fff; 
+        border-left: 5px solid var(--accent-yellow); /* Yellow accent border */
+        box-shadow: 0 4px 12px rgba(0, 120, 215, 0.1);
+    }
+    .card h3 {
+        color: #fff; /* Card headings white */
+    }
+    
+    /* Button Fix (Using Yellow on Dark Background) */
+    a.btn-mini{ 
+        display:inline-block; 
+        padding:8px 12px; 
+        border-radius:8px; 
+        background:var(--accent-yellow); 
+        color:#333; /* Dark text on yellow for contrast */
+        text-decoration:none; 
+        font-weight:700; 
+    }
+    
+    /* Footer Styling for Dark Theme */
+    .site-footer {
+        background-color: #111; /* Even darker footer */
+        color: #fff;
+        padding: 15px 0;
+        text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header class="header"><div class="container"><div class="brand"><img src="https://cdn-icons-png.flaticon.com/512/1048/1048945.png" alt="logo"><h1>PowerEase</h1></div></div></header>
+
+  <div class="container wrap">
+    <aside class="aside">
+      <h3>My Account</h3>
+      <nav style="margin-top:12px;">
+        <a href="#">View Bills</a>
+        <a href="#">Pay Bill</a>
+        <a href="#">Profile</a>
+      </nav>
+      <div style="margin-top:18px"><a href="login.html" class="btn-mini">Logout</a></div>
+    </aside>
+
+    <main class="mainarea">
+      <h2>Welcome, User!</h2>
+      <div class="stat">
+        <div class="box"><strong>Usage:</strong><div style="font-size:1.6rem">354 kWh</div></div>
+        <div class="box"><strong>Current Bill:</strong><div style="font-size:1.6rem">PKR 4,520</div></div>
+        <div class="box"><strong>Due Date:</strong><div style="font-size:1.6rem">Nov 10, 2025</div></div>
+      </div>
+
+      <div class="act-grid">
+        <div class="card"><h3>Latest Bill</h3><p>Amount: PKR 4,520 — Status: <strong>Unpaid</strong></p><a class="btn-mini" href="#">Pay Now</a></div>
+        <div class="card"><h3>Billing History</h3><p>View past invoices and download receipts.</p></div>
+        <div class="card"><h3>Usage Insights</h3><p>Monthly consumption graph.</p></div>
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer"><div class="container">© 2025 PowerEase</div></footer>
+</body>
+</html>
